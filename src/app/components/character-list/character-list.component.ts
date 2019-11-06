@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { MediaObserver } from '@angular/flex-layout';
 import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
-import { CharacterResponseModel, Gender } from 'src/app/models/character-respone-model';
-import { CharacterListResponseModel } from 'src/app/models/character-list-respone-model';
+import { Character, Gender } from 'src/app/models/character-respone-model';
+import { CharacterList } from 'src/app/models/character-list-respone-model';
 
 @Component({
   selector: 'app-character-list',
@@ -13,7 +13,7 @@ import { CharacterListResponseModel } from 'src/app/models/character-list-respon
 })
 export class CharacterListComponent implements OnInit, OnChanges {
   @Input()
-  characterList: CharacterResponseModel[] = [];
+  characterList: Character[] = [];
   @Input()
   apiUrl: string;
 
@@ -44,7 +44,7 @@ export class CharacterListComponent implements OnInit, OnChanges {
     if (!apiUrl) {
       return;
     }
-    this.http.get<CharacterListResponseModel>(apiUrl)
+    this.http.get<CharacterList>(apiUrl)
       .pipe(
         map(response => {
           this.nextUrl = response && response.next;
@@ -68,7 +68,7 @@ export class CharacterListComponent implements OnInit, OnChanges {
     this.characterList = this.characterList.sort((a, b) => this.comparer(a, b, data.value));
   }
 
-  comparer(a: CharacterResponseModel, b: CharacterResponseModel, data: string) {
+  comparer(a: Character, b: Character, data: string) {
     if (data === "A-Z") {
       if (a.name > b.name) {
         return 1

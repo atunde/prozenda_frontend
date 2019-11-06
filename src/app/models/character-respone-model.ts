@@ -1,4 +1,4 @@
-export class CharacterResponseModel {
+export class Character {
     name: string;
     gender: Gender
 }

@@ -1,8 +1,8 @@
-import { CharacterResponseModel } from './character-respone-model';
+import { Character } from './character-respone-model';
 
-export class CharacterListResponseModel {
+export class CharacterList {
     count: number;
     next: string;
     previous: string;
-    results: CharacterResponseModel[];
+    results: Character[];
 }
