@@ -6,15 +6,6 @@ import { FizzBuzz } from './fizzbuzz';
 describe('FizzBuzz', () => {
 
 let fizzBuzz;
-
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       imports: [ ],
-//       providers:[ FizzBuzz]
-//     });
-//     fizzBuzz = TestBed.get("FizzBuzz");
-//   });
-
     beforeEach(() => {
         fizzBuzz = new FizzBuzz();
     });
