@@ -1,10 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, Subject } from 'rxjs';
-import { takeUntil, map, take } from 'rxjs/operators';
-import { CharacterListResponseModel } from './models/character-list-respone-model';
-import { CharacterResponseModel } from './models/character-respone-model';
-import {MediaObserver} from '@angular/flex-layout';
+import { Component, OnInit } from '@angular/core';
 import { FizzBuzz } from './fizz-buzz/fizzbuzz';
 
 
@@ -20,6 +14,5 @@ export class AppComponent implements OnInit {
   }
   title = 'Star Wars Character Search';
   apiUrl = 'https://swapi.co/api/people/';
-  
   
 }

@@ -10,6 +10,7 @@ export class FizzBuzz {
         let output: string;
         while (i <= 100) {
             console.log(this.returnOutput(i));
+            i++;
         }
     }
 

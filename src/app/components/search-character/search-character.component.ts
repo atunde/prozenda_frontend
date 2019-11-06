@@ -20,12 +20,9 @@ export class SearchCharacterComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   searchCharacter() {
-    debugger;
     this.filter.next(`${this.searchUrl}${this.searchFormControl.value}`);
   }
-
 }
