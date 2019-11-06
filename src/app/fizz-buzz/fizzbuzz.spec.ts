@@ -5,41 +5,40 @@ import { FizzBuzz } from './fizzbuzz';
 
 describe('FizzBuzz', () => {
 
-let fizzBuzz;
+ let fizzBuzz = new FizzBuzz();
     beforeEach(() => {
-        fizzBuzz = new FizzBuzz();
     });
 
   it('should be created', () => {
     expect(fizzBuzz).toBeTruthy();
   });
 
-  it('should return Fizz for multiples of 3'), function() {
+  it('should return Fizz for multiples of 3', () => {
       //setup
       //act
       var res = fizzBuzz.returnOutput(3);
       //assert
       expect(res).toEqual("Fizz");
-  }
-  it('should return Buzz for multiples of 5'), function() {
+  });
+  it('should return Buzz for multiples of 5', () => {
     //setup
     //act
     var res = fizzBuzz.returnOutput(10);
     //assert
     expect(res).toEqual("Buzz");
-}
-it('should return FizzBuzz for multiples of 5 and 3'), function() {
+});
+it('should return FizzBuzz for multiples of 5 and 3', () => {
     //setup
     //act
-    var res = fizzBuzz.calculateOutput(15);
+    var res = fizzBuzz.returnOutput(15);
     //assert
     expect(res).toEqual("FizzBuzz");
-}
-it('should return number for neither multiples of 5 nor 3'), function() {
+});
+it('should return number for neither multiples of 5 nor 3', () => {
     //setup
     //act
-    var res = fizzBuzz.calculateOutput(2);
+    var res = fizzBuzz.returnOutput(2);
     //assert
     expect(res).toEqual("2");
-}
+});
 });

@@ -9,7 +9,8 @@ export class FizzBuzz {
         }
     }
 
-    returnOutput(value: number) {
+    returnOutput(value: number):string {
+        debugger;
         if (this.isMultipleOfThreeAndFive(value)) {
             return "FizzBuzz";
         }
@@ -19,7 +20,7 @@ export class FizzBuzz {
         if (this.isMultipleOfFive(value)) {
             return "Buzz";
         }
-        return value;
+        return value.toString();
     }
 
     isMultipleOfThreeAndFive(value: number): boolean {
