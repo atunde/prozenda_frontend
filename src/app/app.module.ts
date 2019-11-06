@@ -14,9 +14,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { SearchCharacterComponent } from './search-character/search-character.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { CharacterListComponent } from './character-list/character-list.component';
+import { SearchCharacterComponent } from './components/search-character/search-character.component';
+import { CharacterListComponent } from './components/character-list/character-list.component';
 
 
 @NgModule({

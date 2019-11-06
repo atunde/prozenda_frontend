@@ -1,10 +1,10 @@
 import { Component, OnInit, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
-import { CharacterResponseModel, Gender } from '../models/character-respone-model';
 import { HttpClient } from '@angular/common/http';
 import { MediaObserver } from '@angular/flex-layout';
 import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
-import { CharacterListResponseModel } from '../models/character-list-respone-model';
+import { CharacterListResponseModel } from '../../models/character-list-respone-model';
+import { CharacterResponseModel, Gender } from 'src/app/models/character-respone-model';
 
 @Component({
   selector: 'app-character-list',
