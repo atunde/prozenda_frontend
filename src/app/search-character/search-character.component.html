@@ -1,0 +1,16 @@
+<form>
+    <form class="example-form" [formGroup]="myForm" (ngSubmit)="searchCharacter()">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Search" [formControl]="searchFormControl">
+            <mat-error *ngIf="searchFormControl.hasError('minLength') && !emailFormControl.hasError('required')">
+                Please enter at least two characters
+            </mat-error>
+            <mat-error *ngIf="searchFormControl.hasError('required')">
+                Search filter is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <div class="center">
+            <button type="submit">Search character</button>
+        </div>
+    </form>
+</form>

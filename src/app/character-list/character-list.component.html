@@ -1,0 +1,31 @@
+<div class="container" *ngIf="!!characterList.length">
+        <p>Showing {{characterList.length}} of {{maxCount}}</p>
+        <mat-form-field class="select">
+                <mat-label>Sort by</mat-label>
+                <mat-select (selectionChange)="sortBy($event)" >
+                        <mat-option value="A-Z">A-Z</mat-option>
+                        <mat-option value="Z-A">Z-A</mat-option>
+                        <mat-option value="Male">Male</mat-option>
+                        <mat-option value="Female">Female</mat-option>
+                    </mat-select>
+              </mat-form-field>
+       
+        <mat-grid-list [cols]="desiredCols" rowHeight="300px" (window:resize)="onResize($event)">
+    
+            <div *ngFor="let character of characterList; let i = index " class="swcard">
+                <mat-grid-tile>
+                    <mat-card class="swcard">
+                        <img mat-card-image [src]="getImage(i)">
+                        <mat-card-content class="character-name">
+                            {{character.name}}
+                        </mat-card-content>
+                    </mat-card>
+                </mat-grid-tile>
+            </div>
+        </mat-grid-list>
+    
+        <div fxLayout='row' class='load'>
+            <button fxFlex="100%" mat-raised-button color="primary" (click)="showMore = false"
+                (click)="loadMore()">Load more</button>
+        </div>
+    </div>

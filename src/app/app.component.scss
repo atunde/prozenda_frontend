@@ -1,0 +1,42 @@
+.load {
+    margin: 20px 30px 40px 30px;
+}
+
+.swcard {
+    max-height: 200px;
+    max-width: 150px;
+    margin: 10px;
+    min-width: 100px;
+    min-height: 200px;
+}
+
+.character-name {
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+
+mat-grid-list {
+    overflow-y: auto;
+    overflow-x: auto;   
+}
+
+div {
+    mat-card {
+        img {
+            padding: 10px;
+        }
+    }
+   
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+  }
+
+.container {
+    p {
+        margin-left: 10px;
+        font-size: 15px;
+    }
+}

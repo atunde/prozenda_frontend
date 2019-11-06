@@ -1,0 +1,28 @@
+<mat-toolbar>{{title}}</mat-toolbar>
+<div class='center'>
+    <app-search-character (filter)="apiUrl = $event"></app-search-character>
+</div>
+<app-character-list [apiUrl]="apiUrl"></app-character-list>
+<!-- <div class="container" *ngIf="!!characterList.length">
+    <p>Showing {{characterList.length}} of {{maxCount}}</p>
+    <mat-grid-list [cols]="desiredCols" rowHeight="300px" (window:resize)="onResize($event)">
+        
+
+        <div *ngFor="let character of characterList; let i = index " class="swcard">
+            <mat-grid-tile>
+                <mat-card class="swcard">
+                    <img mat-card-image [src]="getImage(i)">
+                    <mat-card-content class="character-name">
+                        {{character.name}}
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+        </div>
+        
+    </mat-grid-list>
+
+    <div fxLayout='row' class='load'>
+        <button fxFlex="100%" mat-raised-button color="primary" (click)="showMore = false" flex="100"
+            (click)="loadMore()">Load more</button>
+    </div>
+</div> -->
